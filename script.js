@@ -121,12 +121,16 @@ function checkGameWinner() {
 }
 
 function showWinner(winner) {
-    const p = document.getElementById('js-winner')
+    const div = document.getElementById('js-playerWin');
+    const p = document.getElementById('js-winner');
+    div.style.display= 'inline';
     p.innerHTML = `And the winner is... ${winner}`;
 }
 
 function hideWinner() {
+    const div = document.getElementById('js-playerWin');
     const p = document.getElementById('js-winner')
+    div.style.display= 'none';
     p.innerHTML = '';
 }
 
