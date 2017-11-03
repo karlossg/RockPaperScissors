@@ -66,9 +66,11 @@ function playerPick(playerPick) {
 function checkRoundWinner(playerPick, computerPick) {
     const playerResultElem = document.getElementById('js-playerResult');
     const computerResultElem = document.getElementById('js-computerResult');
+    const drawElem = document.getElementById('js-draw');
     let winnerIs = 'player';
     playerResultElem.innerHTML = '';
     computerResultElem.innerHTML = '';
+    drawElem.innerHTML = '';
     
     if (playerPick == computerPick) {
         winnerIs = 'noone'; 
@@ -86,6 +88,8 @@ function checkRoundWinner(playerPick, computerPick) {
     } else if (winnerIs === 'computer') {
         computerResultElem.innerHTML = "Win!";
         computer.score++;
+    } else {
+        drawElem.innerHTML = "Draw!";
     }
     setGamePoints();
     checkGameWinner();
