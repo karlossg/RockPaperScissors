@@ -19,7 +19,9 @@ let computer = {
 
 function newGame() {
     const playerNameElem = document.getElementById('js-playerName');
-    player.name = prompt('Please enter your name', 'imię gracza');
+    if (player.name === '') {
+        player.name = prompt('Please enter your name', 'imię gracza');
+    }
     hideWinner();
     if (player.name) {
         player.score = 0;
