@@ -26,6 +26,7 @@ function newGame() {
         computer.score = 0;
         setGameElements('started');
         playerNameElem.innerHTML = player.name;
+        setGamePoints();
     }
 }
 
