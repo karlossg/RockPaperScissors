@@ -3,8 +3,6 @@ const pickRock = document.getElementById('js-playerPick_rock');
 const pickPaper = document.getElementById('js-playerPick_paper');
 const pickScissors = document.getElementById('js-playerPick_scissors');
 
-
-
 newGameBtn.addEventListener('click', newGame);
 pickRock.addEventListener('click', () => { playerPick('rock') });
 pickPaper.addEventListener('click', () => { playerPick('paper') });
@@ -28,7 +26,6 @@ function newGame() {
         computer.score = 0;
         setGameElements('started');
         playerNameElem.innerHTML = player.name;
-        setGamePoints();
     }
 }
 
@@ -58,9 +55,9 @@ function getComputerPick() {
 }
 
 function playerPick(playerPick) {
-    const computerPick = getComputerPick();
     const playerPickElem = document.getElementById('js-playerPick');
     const computerPickElem = document.getElementById('js-computerPick');
+    const computerPick = getComputerPick();
     playerPickElem.innerHTML = playerPick;
     computerPickElem.innerHTML = computerPick;
     checkRoundWinner(playerPick, computerPick);
@@ -103,7 +100,6 @@ function hideLastRoundWinner() {
 
 function setGamePoints() {
     const playerPointsElem = document.getElementById('js-playerPoints');
-    
     const computerPointsElem = document.getElementById('js-computerPoints');
     playerPointsElem.innerHTML = player.score;
     computerPointsElem.innerHTML = computer.score;
@@ -123,7 +119,6 @@ function checkGameWinner() {
 function showWinner(winner) {
     const p = document.getElementById('js-winner')
     p.innerHTML = `And the winner is... ${winner}`;
-
 }
 
 function hideWinner() {
