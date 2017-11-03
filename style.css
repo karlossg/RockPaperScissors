@@ -1,3 +1,9 @@
 .container {
     padding: 5%;
 }
+
+p {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(221, 97, 97);
+}
