@@ -1,3 +1,5 @@
+'use strict';
+
 const newGameBtn = document.getElementById('js-newGameButton');
 const pickRock = document.getElementById('js-playerPick_rock');
 const pickPaper = document.getElementById('js-playerPick_paper');
